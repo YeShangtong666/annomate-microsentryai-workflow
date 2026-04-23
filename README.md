@@ -5,21 +5,40 @@
   <img src="./logos/MicroSentryAI.png" width="200" />
 </p>
 
-AnnoMate with MicroSentryAI is a desktop image-annotation and defect-detection tool designed to streamline quality assurance for manufactured parts. With features such as polygon mask creation, label export to standard annotation formats, and real-time image previews with overlaid masks, AnnoMate simplifies and accelerates the assessment process during production. Its integrated AI/ML capabilities support inspectors by highlighting potential defects and identifying components that may appear incorrect or out of specification. This assistance enhances decision-making and improves consistency in part evaluations.
+AnnoMate with MicroSentryAI is a desktop image-annotation and defect-detection tool designed to streamline quality assurance for manufactured parts. With features such as polygon mask creation, label export to standard annotation formats, and real-time image previews with overlaid masks, AnnoMate simplifies and accelerates the assessment process during production. Its integrated AI/ML capabilities, powered by a flexible engine supporting various anomaly detection models, assist inspectors by highlighting potential defects and identifying components that may appear incorrect or out of specification. This assistance enhances decision-making and improves consistency in part evaluations. MicroSentryAI is built with a flexible architecture, supporting a variety of anomaly detection models, including those from the Anomalib ecosystem, and provides a robust framework for integrating custom AI/ML models.
 
 ## Installation
 
-You can install AnnoMate with MicroSentryAI using either pip or conda. Installing AnnoMate with MicroSentryAI in a clean environment with Python 3.12 may be necessary. (Some AnnoMate with MicroSentryAI dependencies currently do not support Python>=3.13)
+To install AnnoMate with MicroSentryAI, follow these steps. It is highly recommended to use a clean virtual environment with Python 3.10+ to manage dependencies. (Note: Some dependencies may not support Python >= 3.13 yet, so Python 3.12 or earlier is recommended).
 
-### pip
-```
-pip install -r requirements.txt
-```
+### Prerequisites
+*   **OS:** macOS, Linux, or Windows.
+*   **Python:** Version 3.10+ is recommended.
+*   **Conda:** Anaconda or Miniconda is highly recommended for managing ML dependencies.
 
-### conda
-```
-conda env create -f environment.yml
-```
+### Steps
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/cjgeo22/AnnoMate-and-MicroSentryAI.git
+    cd AnnoMate-and-MicroSentryAI
+    ```
+
+2.  **Create a Virtual Environment (Conda Recommended)**
+    ```bash
+    conda create -n annomate python=3.10
+    conda activate annomate
+    ```
+
+3.  **Install Dependencies**
+    Install the required libraries. If you are on Apple Silicon (M1/M2/M3), ensure you have the MPS-enabled version of PyTorch installed.
+    ```bash
+    pip install -r requirements.txt
+    ```
+    Alternatively, using conda:
+    ```bash
+    conda env update --file environment.yml --prune
+    ```
 
 
 ## Usage
